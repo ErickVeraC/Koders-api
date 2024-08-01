@@ -9,4 +9,25 @@ router.get("/", (request, response) => {
   });
 });
 
+//POST /mentors
+router.post("/", (request, response) => {
+  response.json({
+    message: "POST mentors",
+  });
+});
+
+//DELETE /mentors
+router.delete("/:name", (request, response) => {
+  response.json({
+    message: "DELETE mentors",
+  });
+});
+
+//DELETE ALL /mentors
+router.delete("/", (request, response) => {
+  response.json({
+    message: "DELETE ALL mentors",
+  });
+});
+
 module.exports = router;
